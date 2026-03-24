@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>카트 리스트</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        /*바깥 컨테이너 박스*/
+        .container{
+            width: 80%;
+            /*위아래가 30px가 되고 가운데 정렬(자연스럽게 오왼은 자동배치)*/
+            margin: 30px auto;
+        }
+        table{
+            width: 100%;
+            /*이건 또 뭐지*/
+            border-collapse: collapse;
+        }
+        .table, th, td{
+            border: 1px solid #CCCCCC;
+        }
+        .th_column{
+            font-size:1.2rem;
+        }
+        .product{
+            width:80px;
+            height:80px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            /*세로 기준 가운데 정렬*/
+            vertical-align: middle;
+        }
+
+        thead {
+            background-color: #f2f2f2;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+        }
+
+        .col-4 {
+            width: 30%;
+        }
+
+        .col-8 {
+            width: 70%;
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            border: 1px solid #DDDDDD;
+            /*모서리 동글동글하게 만들기. 테두리 반경*/
+            border-radius: 10px;
+        }
+
+        /*여기 중요하대요오고고곡ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ*/
+        /*input 태그 중 type 속성이 number인 항목들  */
+        /*이 친구도 선택자에요 */
+        input[type="number"] {
+            width: 80px;
+            /*가운데 배치*/
+            text-align: center;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn-danger {
+            background-color: red;
+            color: white;
+        }
+
+        .btn-primary {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .text-end {
+            text-align: right;
+        }
+
+        .mt-3 {
+            margin-top: 15px;
+        }
+
+        .mb-4 {
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2 class="mb-4">
+        <span style="color:blue; font-size:2rem;">홍길동</span>
+        <span style="font-size:1.3rem;">님의 장바구니</span>
+    </h2>
+
+    <table>
+        <thead>
+            <tr >
+                <th class="th_column">
+                    <input type="checkbox"> 전체 선택
+                </th>
+                <th class=" th_column">
+                    상품 정보
+                </th>
+                <th class=" th_column">
+                    수량
+                </th>
+                <th class=" th_column">
+                    금액
+                </th>
+                <th class=" th_column">
+                    삭제
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="td_row">
+                    <input type="checkbox" checked>
+                </td>
+                <td class="td_row">
+                    <div class="row">
+<!--                   나중엔 여기가 4+8로 12로 한 이유를 알 수 있을거임-->
+                        <div class="col-4">
+                            <img class="product" src="/images/americano01.png" alt="아메리카노">
+                        </div>
+                        <div class="col-8">
+                            아메리카노
+                        </div>
+                    </div>
+                </td>
+                <td class="td_row">
+                    <input type="number" value="1" min="1" max="10" >
+                </td>
+                <td class="td_row">
+                    4,500
+                </td>
+                <td class="td_row">
+<!--                    button에 클래스 두개 주기-->
+                    <button class="btn btn-danger">
+                        삭제
+                    </button>
+                </td>
+            </tr>
+<!--            ------------------------------------------------------------------------------------------>
+<!--            여기부터는 두번째 행입니다.-->
+            <tr>
+                <td class="td_row">
+                    <input type="checkbox">
+                </td>
+                <td class="td_row">
+                    <div class="row">
+                        <!--                   나중엔 여기가 4+8로 12로 한 이유를 알 수 있을거임-->
+                        <div class="col-4">
+                            <img class="product" src="/images/brioche_02.png" alt="브리오슈">
+                        </div>
+                        <div class="col-8">
+                            브리오슈
+                        </div>
+                    </div>
+                </td>
+                <td class="td_row">
+                    <input type="number" value="1" min="1" max="10" >
+                </td>
+                <td class="td_row">
+                    6,000
+                </td>
+                <td class="td_row">
+                    <!--                    button에 클래스 두개 주기-->
+                    <button class="btn btn-danger">
+                        삭제
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 class="text-end mt-3">
+        총 주문 금액 : 10,500원
+    </h3>
+    <div class="text-end">
+        <button class="btn btn-primary">
+            주문하기
+        </button>
+    </div>
+
+</div>
+</body>
+</html>

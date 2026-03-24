@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>혜진's boxModelTest</title>
+    <style>
+        div{
+            border:1px solid black;
+            width : 100px;
+            height: 100px;
+            /*position:static;*/
+            position: absolute;
+        }
+        div#mydiv{
+            top:10px;
+            left: 10px;
+            width: 300px;
+            height: 300px;
+            background: white;
+            border: 1px solid red;
+            /*position:absolute;*/
+            position: relative;
+            /*position:static;*/
+            /*position:fixed;*/
+        }
+        .test1{
+            top:20px;
+            left: 0px;
+            background: aqua;
+        }
+        .test2{
+            top:50px;
+            left: 150px;
+            background: fuchsia;
+        }
+        .test3{
+            background:yellow;
+            bottom:50px;
+            left:30px;
+        }
+        .test4{
+            color:white;
+            bottom:20px;
+            right:80px;
+            background:blue;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mydiv">
+        <div class="test1">소녀 시대</div>
+        <div class="test2">원더 걸스</div>
+        <div class="test3">티아라</div>
+        <div class="test4">EXID</div>
+    </div>
+
+
+</body>
+</html>
