@@ -52,28 +52,54 @@
 
                 <tbody>
                 <tr>
-                  <td class="text-center">가격</td>
-                  <td>john@example.com</td>
+                  <td class="text-center col-ms-2">가격</td>
+                  <td class="col-ms-10">4,000원</td>
                 </tr>
                 <tr>
                   <td class="text-center">카테고리</td>
-                  <td>john@example.com</td>
+                  <td>빵</td>
                 </tr>
                 <tr>
                   <td class="text-center">재고</td>
-                  <td>john@example.com</td>
+                  <td>10개</td>
                 </tr>
                 <tr>
                   <td class="text-center">설명</td>
-                  <td>john@example.com</td>
+                  <td>프랑스에서 유래한 버터가 많이 들어간 달콤하고 부드러운 빵입니다.</td>
                 </tr>
                 <tr>
                   <td class="text-center">등록일자</td>
-                  <td>john@example.com</td>
+                  <td>2026-03-20</td>
                 </tr>
+
 
                 </tbody>
               </table>
+              <!--                구매 수량-->
+              <div class="row col-mb-3 align-items-center">
+                <div class="col-3 text-center">
+                  구매수량
+                </div>
+                <div class="col-5">
+                  <input type="number" min="1" max="100" class="form-control ">
+
+                </div>
+
+              </div>
+
+              <div class="row col-mb-3 mt-3 align-items-center">
+                <div class="col-3 text-center">
+                  <a class="btn btn-primary" onclick="pd_cancle();">이전 목록</a>
+                </div>
+                <div class="col-3 text-center">
+                  <a class="btn btn-success" onclick="pd_back();">장바구니</a>
+                </div>
+                <div class="col-3 text-center">
+                  <a class="btn btn-danger" onclick="pd_order();">주문하기</a>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -98,6 +124,18 @@
       document.getElementById('loadingView').style.display = 'none';
       document.getElementById('errorView').style.display = 'none';
       document.getElementById('successView').style.display = 'block';
+    }
+    function pd_cancle() {
+      alert("이전 목록으로 넘어갑니다.");
+    }
+    function pd_back() {
+
+      alert("장바구니 목록을 보여줍니다.");
+    }
+    function pd_order() {
+      const is_delect = confirm("상품을 주문하시겠습니까?");
+      if(!is_delect) return;
+      alert("주문 되었습니다.");
     }
   </script>
 
